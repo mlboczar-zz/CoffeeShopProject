@@ -1,6 +1,6 @@
 package com.grandcircus.spring.controller;
 
-import com.grandcircus.spring.CoffeeCustomer;
+import com.grandcircus.spring.Customer;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -25,18 +25,19 @@ public class HomeController {
     public ModelAndView customer()
     {
         return new
-                ModelAndView("registration","customer",new CoffeeCustomer());
+                ModelAndView("registration","customer",new Customer());
     }
 
-    @RequestMapping(value="/addCoffeeCustomer", method = RequestMethod.POST)
-    public String addCustomer(CoffeeCustomer coffeeCustomer, Model model){
-        model.addAttribute("customer",coffeeCustomer);
+    @RequestMapping(value= "/addCustomer", method = RequestMethod.POST)
+    public String addCustomer(Customer customer, Model model){
+        model.addAttribute("customer", customer);
 
         return "summary";
     }
 
     @ModelAttribute("command")
-    public CoffeeCustomer defaultInstance(){
-        return new CoffeeCustomer();
+    public Customer defaultInstance(){
+        return new Customer();
     }
+
 }

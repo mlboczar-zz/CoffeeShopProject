@@ -18,7 +18,7 @@
 
 <h2>Please fill in the form to register!</h2>
 
-<form:form method="POST" action="/addCoffeeCustomer">
+<form:form method="POST" action="/addCustomer">
     <table>
         <tr>
             <td><form:label path="firstName">First Name</form:label></td>
@@ -39,6 +39,7 @@
         <tr>
             <td><form:label path="password">Password</form:label></td>
             <td><form:input type="password" path="password"/></td>
+            <td><form:errors path="password" cssClass="error" /></td>
         </tr>
         <tr>
             <td colspan ="2">

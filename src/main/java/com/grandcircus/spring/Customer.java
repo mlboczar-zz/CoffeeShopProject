@@ -3,7 +3,8 @@ package com.grandcircus.spring;
 /**
  * Created by Megan on 5/8/2017.
  */
-public class CoffeeCustomer {
+public class Customer {
+
     private String firstName;
     private String lastName;
     private String email;
