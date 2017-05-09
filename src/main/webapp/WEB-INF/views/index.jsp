@@ -10,9 +10,15 @@
 <html>
 <head>
     <title>Index</title>
+    <link href="../resources/styles.css" rel="stylesheet">
+
 </head>
 <body>
-<h2>Welcome to GC COFFEE </h2>
-<a href='/registration'>Register</a>
+
+    <h1>Welcome to The Java Bean</h1>
+    <p class="lead"><a href='/registration'>Create an Account</a><br></p>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </body>
 </html>

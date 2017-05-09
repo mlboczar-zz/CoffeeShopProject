@@ -9,6 +9,7 @@
 <html>
 <head>
     <title>Registration Summary</title>
+    <link href="../resources/styles.css" rel="stylesheet">
 </head>
 <body>
 <h2>Welcome ${customer.firstName}!</h2>
