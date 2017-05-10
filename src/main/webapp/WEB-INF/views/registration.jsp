@@ -39,13 +39,26 @@
         </tr>
         <tr>
             <td><form:label path="password">Password</form:label></td>
-            <td><form:input type="password" path="password"/></td>
+            <td><form:input type="password" path="password"/></td><br>
         </tr>
-        <tr>
+    </table>
+
+    <div class="radio">
+    <form:label path="experience">How much do you LOVE coffee?</form:label><br>
+    <form:radiobutton path="experience" value="pro"/>I pratically have coffee running through my veins!<br>
+    <form:radiobutton path="experience" value="medium"/>A cuppa day, with cream and sugar.<br>
+    <form:radiobutton path="experience" value="beginner"/>I've had a few mochas.<br></div>
+
+    <div class="check">
+    <form:label path="otherShops">Which of the following have you visited in the last 30 days?</form:label><br>
+    <form:checkbox path="otherShops" value="Starbucks"/>Starbucks<br>
+            <form:checkbox path="otherShops" value="TimHortons"/>Tim Horton's<br>
+            <form:checkbox path="otherShops" value="Biggby"/>Biggby<br></div>
+
+
             <td colspan ="2">
                 <input type="submit" value="Register"/></td>
         </tr>
-    </table>
 </form:form>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
