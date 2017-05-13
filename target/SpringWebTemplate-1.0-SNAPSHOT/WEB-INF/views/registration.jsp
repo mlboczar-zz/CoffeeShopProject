@@ -5,12 +5,11 @@
   Time: 2:34 PM
   To change this template use File | Settings | File Templates.
 --%>
-
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <html>
 <head>
     <title>User Registration</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link href="../resources/styles.css" rel="stylesheet">
 
@@ -19,49 +18,49 @@
 
 <h2>Please fill in the form to register!</h2>
 
-<form:form method="POST" action="/addCustomer">
-    <table align="center">
-        <tr>
-            <td><form:label path="firstName">First Name</form:label></td>
-            <td><form:input path="firstName"/></td>
-        </tr>
-        <tr>
-            <td><form:label path="lastName">Last Name</form:label></td>
-            <td><form:input path="lastName"/></td>
-        </tr>
-        <tr>
-            <td><form:label path="email">Email</form:label></td>
-            <td><form:input path="email"/></td>
-        </tr>
-        <tr>
-            <td><form:label path="phoneNumber">Phone Number</form:label></td>
-            <td><form:input path="phoneNumber"/></td>
-        </tr>
-        <tr>
-            <td><form:label path="password">Password</form:label></td>
-            <td><form:input type="password" path="password"/></td><br>
-        </tr>
-    </table>
 
-    <div class="radio">
-    <form:label path="experience">How much do you LOVE coffee?</form:label><br>
-    <form:radiobutton path="experience" value="pro"/>I pratically have coffee running through my veins!<br>
-    <form:radiobutton path="experience" value="medium"/>A cuppa day, with cream and sugar.<br>
-    <form:radiobutton path="experience" value="beginner"/>I've had a few mochas.<br></div>
+<form name="form" method="post" action="/addCustomer" onsubmit="return validateForm()">
+    First Name: <input type="text" name="firstName"><br>
+    Last Name: <input type="text" name="lastName"><br>
+    Email Address: <input type="text" name="email"><br>
+    Phone Number: <input type="text" name="phoneNumber"><br>
+    Password: <input type="text" name="password"><br>
 
-    <div class="check">
-    <form:label path="otherShops">Which of the following have you visited in the last 30 days?</form:label><br>
-    <form:checkbox path="otherShops" value="Starbucks"/>Starbucks<br>
-            <form:checkbox path="otherShops" value="TimHortons"/>Tim Horton's<br>
-            <form:checkbox path="otherShops" value="Biggby"/>Biggby<br></div>
+    <h4>How much do you LOVE coffee?</h4>
+    <input type="radio" name="loveCoffee" value="yes">I practically have coffee running through my veins!<br>
+    <input type="radio" name="loveCoffee" value="sortOf">A cuppa day, with cream and sugar<br>
+    <input type="radio" name="loveCoffee" value="no">I had a frappuccino once.<br>
 
 
-            <td colspan ="2">
-                <input type="submit" value="Register"/></td>
-        </tr>
-</form:form>
+    <h4>Which of the following have you been to in the last three months?</h4>
+    <input type="checkbox" name="otherCoffee" value="starbucks">Starbucks<br>
+    <input type="checkbox" name="otherCoffee" value="biggby">Biggby<br>
+    <input type="checkbox" name="otherCoffee" value="tim">Tim Hortons<br>
+    <input type="checkbox" name="otherCoffee" value="espresso">Espresso Royale<br>
+    <input type="submit" value="Register"/><br>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</form>
+
+<script>
+    function validateForm() {
+        var firstName = document.forms["form"]["firstName"].value;
+        var lastName = document.forms["form"]["lastName"].value;
+        var email = document.forms["form"]["email"].value;
+        var phoneNumber = document.forms["form"]["phoneNumber"].value;
+        var password = document.forms["form"]["password"].value;
+
+        if(!firstName || !lastName || !email || !phoneNumber || !password) {
+            alert("All fields are required.");
+            return false;
+        }
+
+        var n = email.includes("@")
+        if(!n) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+    }
+</script>
 
 </body>
 </html>
