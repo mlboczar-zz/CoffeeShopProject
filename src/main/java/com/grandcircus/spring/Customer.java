@@ -11,8 +11,8 @@ public class Customer {
     private String phoneNumber;
     private String password;
     private String confirmPassword;
-    private String experience;
-    private String otherShops;
+    private String loveCoffee;
+    private String otherCoffee;
 
     public String getFirstName() {
         return firstName;
@@ -54,12 +54,12 @@ public class Customer {
         this.password = password;
     }
 
-    public String getOtherShops() {
-        return otherShops;
+    public String getOtherCoffee() {
+        return otherCoffee;
     }
 
-    public void setOtherShops(String otherShops) {
-        this.otherShops = otherShops;
+    public void setOtherCoffee(String otherCoffee) {
+        this.otherCoffee = otherCoffee;
     }
 
     public String getConfirmPassword() {
@@ -70,11 +70,11 @@ public class Customer {
         this.confirmPassword = confirmPassword;
     }
 
-    public String getExperience() {
-        return experience;
+    public String getLoveCoffee() {
+        return loveCoffee;
     }
 
-    public void setExperience(String experience) {
-        this.experience = experience;
+    public void setLoveCoffee(String loveCoffee) {
+        this.loveCoffee = loveCoffee;
     }
 }

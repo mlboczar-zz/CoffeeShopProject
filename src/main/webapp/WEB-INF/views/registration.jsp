@@ -20,11 +20,12 @@
 
 
 <form name="form" method="post" action="/addCustomer" onsubmit="return validateForm()">
-    First Name: <input type="text" name="firstName"><br>
-    Last Name: <input type="text" name="lastName"><br>
-    Email Address: <input type="text" name="email"><br>
-    Phone Number: <input type="text" name="phoneNumber"><br>
-    Password: <input type="text" name="password"><br>
+
+    <p>First Name: <input type="text" name="firstName"><br></p>
+    <p>Last Name: <input type="text" name="lastName"><br></p>
+    <p>Email Address: <input type="text" name="email"><br></p>
+    <p>Phone Number: <input type="text" name="phoneNumber"><br></p>
+    <p>Password: <input type="password" name="password"><br></p>
 
     <h4>How much do you LOVE coffee?</h4>
     <input type="radio" name="loveCoffee" value="yes">I practically have coffee running through my veins!<br>
