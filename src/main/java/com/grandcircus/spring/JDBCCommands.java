@@ -3,6 +3,7 @@ package com.grandcircus.spring;
 import org.springframework.ui.Model;
 
 import java.sql.*;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 /**
@@ -48,6 +49,7 @@ public class JDBCCommands {
         String username = "grant";
         String password = "chirpus";
         String query = "SELECT * FROM items";
+        DecimalFormat df = new DecimalFormat("#.00");
 
         ArrayList<String> list = new ArrayList<>();
 
@@ -67,9 +69,9 @@ public class JDBCCommands {
 
                 String name = rs.getString(2);
                 String description = rs.getString(3);
-                String price = Double.toString(rs.getDouble(5));
+                String price = df.format(rs.getDouble(5));
 
-                list.add(name + ", " + description + ", " + price);
+                list.add(name + "\n" + description + "\n$" + price);
             }
             model.addAttribute("addStuff", list);
 

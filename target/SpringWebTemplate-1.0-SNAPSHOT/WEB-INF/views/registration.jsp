@@ -20,13 +20,30 @@
 
 
 <form name="form" method="post" action="/addCustomer" onsubmit="return validateForm()">
+<table>
+    <tr>
+        <td><label for="firstName">First Name: </label></td>
+        <td><input type="text" id="firstName" name="firstName"><br></td>
+    </tr>
+    <tr>
+        <td><label for="lastName">Last Name: </label></td>
+        <td><input type="text" id="lastName" name="lastName"><br></td>
+    </tr>
+    <tr>
+        <td><label for="email">Email Address: </label></td>
+        <td><input type="text" id="email" name="email"><br></td>
+    </tr>
+    <tr>
+        <td><label for="phoneNumber">Phone Number: </label></td>
+        <td><input type="text" id="phoneNumber" name="phoneNumber"><br></td>
+    </tr>
+    <tr><td><label for="password">Password: </label></td>
+        <td><input type="password" id="password" name="password"><br></td>
+    </tr>
 
-    <p><label for="firstName">First Name: </label><input type="text" id="firstName" name="firstName"><br></p>
-    <p><label for="lastName">Last Name: </label><input type="text" id="lastName" name="lastName"><br></p>
-    <p><label for="email">Email Address: </label><input type="text" id="email" name="email"><br></p>
-    <p><label for="phoneNumber">Phone Number: </label><input type="text" id="phoneNumber" name="phoneNumber"><br></p>
-    <p><label for="password">Password: </label><input type="password" id="password" name="password"><br></p>
+</table>
 
+    <div>
     <h4>How much do you LOVE coffee?</h4>
     <input type="radio" name="loveCoffee" value="yes">I practically have coffee running through my veins!<br>
     <input type="radio" name="loveCoffee" value="sortOf">A cuppa day, with cream and sugar<br>
@@ -38,6 +55,7 @@
     <input type="checkbox" name="otherCoffee" value="biggby">Biggby<br>
     <input type="checkbox" name="otherCoffee" value="tim">Tim Hortons<br>
     <input type="checkbox" name="otherCoffee" value="espresso">Espresso Royale<br>
+    </div>
     <input type="submit" value="Register"/><br>
 
 </form>

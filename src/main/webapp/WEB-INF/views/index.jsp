@@ -23,7 +23,7 @@
     <table>
     <c:forEach items="${addStuff}" var="list">
         <tr>
-            <td><c:out value="${list}"></c:out></td>
+            <td class="itemlist"><c:out value="${list}"></c:out></td>
         </tr>
     </c:forEach>
     </table>
