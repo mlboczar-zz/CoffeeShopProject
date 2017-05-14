@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Megan
@@ -10,13 +12,21 @@
 <html>
 <head>
     <title>Index</title>
-    <link href="../resources/styles.css" rel="stylesheet">
+    <link href="../../resources/styles.css" rel="stylesheet">
 
 </head>
 <body>
 
     <h1>Welcome to The Java Bean</h1>
     <p class="lead"><a href='/registration'>Create an Account</a><br></p>
+
+    <table>
+    <c:forEach items="${addStuff}" var="list">
+        <tr>
+            <td><c:out value="${list}"></c:out></td>
+        </tr>
+    </c:forEach>
+    </table>
 
 
 </body>

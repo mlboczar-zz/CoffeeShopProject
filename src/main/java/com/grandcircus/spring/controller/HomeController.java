@@ -19,9 +19,9 @@ import java.sql.*;
 public class HomeController {
 
     @RequestMapping(value="/")
-    public ModelAndView index() {
-        return new
-                ModelAndView("index", "", "");
+    public String index(Model model) {
+        JDBCCommands.displayItems(model);
+        return "index";
     }
 
     @RequestMapping(value="/registration")

@@ -11,7 +11,7 @@
 <head>
     <title>User Registration</title>
 
-    <link href="../resources/styles.css" rel="stylesheet">
+    <link href="../../resources/styles.css" rel="stylesheet">
 
 </head>
 <body>
@@ -21,11 +21,11 @@
 
 <form name="form" method="post" action="/addCustomer" onsubmit="return validateForm()">
 
-    <p>First Name: <input type="text" name="firstName"><br></p>
-    <p>Last Name: <input type="text" name="lastName"><br></p>
-    <p>Email Address: <input type="text" name="email"><br></p>
-    <p>Phone Number: <input type="text" name="phoneNumber"><br></p>
-    <p>Password: <input type="password" name="password"><br></p>
+    <p><label for="firstName">First Name: </label><input type="text" id="firstName" name="firstName"><br></p>
+    <p><label for="lastName">Last Name: </label><input type="text" id="lastName" name="lastName"><br></p>
+    <p><label for="email">Email Address: </label><input type="text" id="email" name="email"><br></p>
+    <p><label for="phoneNumber">Phone Number: </label><input type="text" id="phoneNumber" name="phoneNumber"><br></p>
+    <p><label for="password">Password: </label><input type="password" id="password" name="password"><br></p>
 
     <h4>How much do you LOVE coffee?</h4>
     <input type="radio" name="loveCoffee" value="yes">I practically have coffee running through my veins!<br>

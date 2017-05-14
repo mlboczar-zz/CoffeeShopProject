@@ -10,9 +10,8 @@
         <module name="Lab20" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="CoffeeShop" target="1.5" />
-      <module name="Lab20" target="1.5" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="CoffeeShop" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
