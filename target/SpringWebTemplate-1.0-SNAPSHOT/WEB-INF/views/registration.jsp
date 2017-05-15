@@ -19,7 +19,7 @@
 <h2>Please fill in the form to register!</h2>
 
 
-<form name="form" method="post" action="/addCustomer" onsubmit="return validateForm()">
+<form name="form" method="post" action="addCustomer" onsubmit="return validateForm()">
 <table>
     <tr>
         <td><label for="firstName">First Name: </label></td>
@@ -37,7 +37,8 @@
         <td><label for="phoneNumber">Phone Number: </label></td>
         <td><input type="text" id="phoneNumber" name="phoneNumber"><br></td>
     </tr>
-    <tr><td><label for="password">Password: </label></td>
+    <tr>
+        <td><label for="password">Password: </label></td>
         <td><input type="password" id="password" name="password"><br></td>
     </tr>
 
