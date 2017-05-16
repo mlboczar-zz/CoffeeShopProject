@@ -19,6 +19,14 @@
 <body>
 
 <table>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Description</td>
+        <td>Quantity</td>
+        <td>Price</td>
+        <td></td>
+    </tr>
     <c:forEach items="${itemsList}" var="items">
         <tr>
             <td><c:out value="${items.itemid}"/></td>
@@ -30,6 +38,8 @@
         </tr>
     </c:forEach>
 </table>
+
+    <p class="lead"><a href='additem'>Add a New Item</a><br></p>
 
 </body>
 </html>
