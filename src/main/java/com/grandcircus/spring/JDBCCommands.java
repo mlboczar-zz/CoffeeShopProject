@@ -71,7 +71,7 @@ public class JDBCCommands {
                 String description = rs.getString(3);
                 String price = df.format(rs.getDouble(5));
 
-                list.add(name + "\n" + description + "\n$" + price);
+                list.add(name + "\n" + description + "\n" + price);
             }
             model.addAttribute("addStuff", list);
 

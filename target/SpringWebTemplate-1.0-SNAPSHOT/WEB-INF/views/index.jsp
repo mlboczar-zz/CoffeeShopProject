@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%--
   Created by IntelliJ IDEA.
@@ -8,7 +9,6 @@
   To change this template use File | Settings | File Templates.
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Index</title>
@@ -27,6 +27,9 @@
         </tr>
     </c:forEach>
     </table>
+
+    <p class="lead"><a href='/itemadmin'>Admin</a><br></p>
+
 
 
 </body>
