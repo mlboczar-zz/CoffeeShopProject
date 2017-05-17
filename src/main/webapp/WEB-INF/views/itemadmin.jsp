@@ -34,12 +34,12 @@
             <td><c:out value="${items.description}"/></td>
             <td><c:out value="${items.quantity}"/></td>
             <td><c:out value="${items.price}"/></td>
-            <td><a href="delete?id=${items.itemid}">Delete</a></td>
+            <td><a href="deleteItem?id=${items.itemid}">Delete</a></td>
         </tr>
     </c:forEach>
 </table>
 
-    <p class="lead"><a href='additem'>Add a New Item</a><br></p>
+<p class="lead"><a href='/additem'>Add an Item</a><br></p>
 
 </body>
 </html>

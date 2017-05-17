@@ -20,42 +20,42 @@
 
 
 <form name="form" method="post" action="addCustomer" onsubmit="return validateForm()">
-<table>
-    <tr>
-        <td><label for="firstName">First Name: </label></td>
-        <td><input type="text" id="firstName" name="firstName"><br></td>
-    </tr>
-    <tr>
-        <td><label for="lastName">Last Name: </label></td>
-        <td><input type="text" id="lastName" name="lastName"><br></td>
-    </tr>
-    <tr>
-        <td><label for="email">Email Address: </label></td>
-        <td><input type="text" id="email" name="email"><br></td>
-    </tr>
-    <tr>
-        <td><label for="phoneNumber">Phone Number: </label></td>
-        <td><input type="text" id="phoneNumber" name="phoneNumber"><br></td>
-    </tr>
-    <tr>
-        <td><label for="password">Password: </label></td>
-        <td><input type="password" id="password" name="password"><br></td>
-    </tr>
+    <table>
+        <tr>
+            <td><label for="firstName">First Name: </label></td>
+            <td><input type="text" id="firstName" name="firstName"><br></td>
+        </tr>
+        <tr>
+            <td><label for="lastName">Last Name: </label></td>
+            <td><input type="text" id="lastName" name="lastName"><br></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email Address: </label></td>
+            <td><input type="text" id="email" name="email"><br></td>
+        </tr>
+        <tr>
+            <td><label for="phoneNumber">Phone Number: </label></td>
+            <td><input type="text" id="phoneNumber" name="phoneNumber"><br></td>
+        </tr>
+        <tr>
+            <td><label for="password">Password: </label></td>
+            <td><input type="password" id="password" name="password"><br></td>
+        </tr>
 
-</table>
+    </table>
 
     <div>
-    <h4>How much do you LOVE coffee?</h4>
-    <input type="radio" name="loveCoffee" value="yes">I practically have coffee running through my veins!<br>
-    <input type="radio" name="loveCoffee" value="sortOf">A cuppa day, with cream and sugar<br>
-    <input type="radio" name="loveCoffee" value="no">I had a frappuccino once.<br>
+        <h4>How much do you LOVE coffee?</h4>
+        <input type="radio" name="loveCoffee" value="yes">I practically have coffee running through my veins!<br>
+        <input type="radio" name="loveCoffee" value="sortOf">A cuppa day, with cream and sugar<br>
+        <input type="radio" name="loveCoffee" value="no">I had a frappuccino once.<br>
 
 
-    <h4>Which of the following have you been to in the last three months?</h4>
-    <input type="checkbox" name="otherCoffee" value="starbucks">Starbucks<br>
-    <input type="checkbox" name="otherCoffee" value="biggby">Biggby<br>
-    <input type="checkbox" name="otherCoffee" value="tim">Tim Hortons<br>
-    <input type="checkbox" name="otherCoffee" value="espresso">Espresso Royale<br>
+        <h4>Which of the following have you been to in the last three months?</h4>
+        <input type="checkbox" name="otherCoffee" value="starbucks">Starbucks<br>
+        <input type="checkbox" name="otherCoffee" value="biggby">Biggby<br>
+        <input type="checkbox" name="otherCoffee" value="tim">Tim Hortons<br>
+        <input type="checkbox" name="otherCoffee" value="espresso">Espresso Royale<br>
     </div>
     <input type="submit" value="Register"/><br>
 
@@ -69,12 +69,12 @@
         var phoneNumber = document.forms["form"]["phoneNumber"].value;
         var password = document.forms["form"]["password"].value;
 
-        if(!firstName || !lastName || !email || !phoneNumber || !password) {
+        if (!firstName || !lastName || !email || !phoneNumber || !password) {
             alert("All fields are required.");
             return false;
         }
 
-        if(!email.includes("@")) {
+        if (!email.includes("@")) {
             alert("Please enter a valid email address.");
             return false;
         }

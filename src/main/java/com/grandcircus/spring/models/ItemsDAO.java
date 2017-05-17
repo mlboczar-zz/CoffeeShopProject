@@ -3,6 +3,7 @@ package com.grandcircus.spring.models;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -37,6 +38,28 @@ public class ItemsDAO {
         selectCustomers.beginTransaction();
         Criteria c = selectCustomers.createCriteria(ItemsEntity.class);
         return (ArrayList<ItemsEntity>) c.list();
+    }
+
+    public static ItemsEntity addItemToTable(@RequestParam(value = "itemid", required = false) int itemid,
+                                      @RequestParam("name") String name,
+                                      @RequestParam("description") String description,
+                                      @RequestParam("quantity") int quantity,
+                                      @RequestParam("price") Double price) {
+        Configuration cfg = new Configuration().configure("hibernate.cfg.xml");
+        SessionFactory sessionFact = cfg.buildSessionFactory();
+        Session session = sessionFact.openSession();
+        Transaction tx = session.beginTransaction();
+        ItemsEntity newItem = new ItemsEntity();
+        newItem.setItemid(itemid);
+        newItem.setName(name);
+        newItem.setDescription(description);
+        newItem.setQuantity(quantity);
+        newItem.setPrice(price);
+
+        session.save(newItem);
+        tx.commit();
+        session.close();
+        return newItem;
     }
 
 }

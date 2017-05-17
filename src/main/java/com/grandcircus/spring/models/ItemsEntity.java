@@ -13,7 +13,7 @@ public class ItemsEntity {
     private String name;
     private String description;
     private int quantity;
-    private BigInteger price;
+    private Double price;
 
     @Id
     @Column(name = "itemid", nullable = false)
@@ -57,11 +57,11 @@ public class ItemsEntity {
 
     @Basic
     @Column(name = "price", nullable = false, precision = 0)
-    public BigInteger getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(BigInteger price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 

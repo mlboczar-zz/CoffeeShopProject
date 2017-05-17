@@ -17,19 +17,18 @@
 </head>
 <body>
 
-    <h1>Welcome to The Java Bean</h1>
-    <p class="lead"><a href='/registration'>Create an Account</a><br></p>
+<h1>Welcome to The Java Bean</h1>
+<p class="lead"><a href='/registration'>Create an Account</a><br></p>
 
-    <table>
+<table>
     <c:forEach items="${addStuff}" var="list">
         <tr>
             <td class="itemlist"><c:out value="${list}"></c:out></td>
         </tr>
     </c:forEach>
-    </table>
+</table>
 
-    <p class="lead"><a href='/itemadmin'>Admin</a><br></p>
-
+<p class="lead"><a href='/itemadmin'>Admin</a><br></p>
 
 
 </body>

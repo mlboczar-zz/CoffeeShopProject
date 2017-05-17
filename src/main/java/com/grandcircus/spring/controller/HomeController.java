@@ -53,9 +53,27 @@ public class HomeController {
                 ModelAndView("itemadmin", "itemsList", itemsList);
     }
 
-    @RequestMapping("delete")
+    @RequestMapping("deleteItem")
     public ModelAndView deleteCustomer(@RequestParam("id") int id) {
         ArrayList<ItemsEntity> itemsList = ItemsDAO.deleteCustomerFromTable(id);
         return new ModelAndView("itemadmin", "itemsList", itemsList);
     }
+    @RequestMapping(value="/additem")
+    public String addFormInfo() {
+        return "additem";
+    }
+
+    @RequestMapping("/success")
+    public ModelAndView addItem (@RequestParam("itemid") int itemid,
+                                @RequestParam("name") String name,
+                                @RequestParam("description") String description,
+                                @RequestParam("quantity") int quantity,
+                                @RequestParam("price") Double price) {
+
+        ItemsEntity newItem = ItemsDAO.addItemToTable(itemid,name,description,quantity,price);
+
+        return new ModelAndView("success", "addingItem", newItem);
+    }
+
+
 }
